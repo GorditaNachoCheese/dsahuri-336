@@ -11,6 +11,11 @@ header, main, nav, footer
     
 }
 
+header
+{
+    width: 50%;
+}
+
 main
 {
     font-family: 'Oswald', sans-serif;
