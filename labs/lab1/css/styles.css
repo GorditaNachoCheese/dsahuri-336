@@ -1,11 +1,11 @@
 body
 {
     background-color:white;
-    
 }
 
 header, main, nav, footer
 {
+    margin: 0 auto;
     text-align: center;
     color: #0000000;
     
@@ -14,11 +14,14 @@ header, main, nav, footer
 header
 {
     width: 50%;
+    margin: 0 auto;
 }
+
 
 main
 {
     font-family: 'Oswald', sans-serif;
+
 }
 
 nav a /* links within "nav" container */
@@ -38,11 +41,12 @@ nav a:hover /*pseudo class */
     transition: .9s; /* transition effect */
 }
 
-#me
+figure, #welcomeText
 {
-    float:left;
-    
+   display:inline-block;
 }
+
+ 
 
 footer
 {
@@ -89,9 +93,7 @@ ul
     text-decoration: underline;
     text-transform: capitalize;
 
-    
 }
-
 
 
 table

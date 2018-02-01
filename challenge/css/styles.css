@@ -1,0 +1,43 @@
+body
+{
+    background-color: black;
+}
+
+header{
+    color: yellow !important;
+    font-family: 'Supermercado One', cursive;
+    text-align: center;
+}
+
+div {
+    
+    
+    color: white !important;
+    font-family: 'Supermercado One', cursive;
+    text-align:center;
+    
+}
+
+#spring, #fall{
+   
+   border-radius: 25px;
+     margin: 0 auto;
+    display: inline-block;
+}
+
+#summer, #winter{
+   
+    border-radius: 25px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+
+
+div img:hover /*pseudo class */
+{
+    border-bottom:2px orange solid;
+    width: 125%;
+    transition: .9s; /* transition effect */
+   
+}
