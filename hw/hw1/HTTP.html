@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+      <meta charset="utf-8" />
+      <title> 
+          Internet Protocols
+      </title>
+      <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"> 
+    </head>
+    <body>
+        <header >
+            <h1> Hyper Text Transfer Protocol</h1>
+        </header>
+        <nav>
+            <a href="index.html" id="navigation">Home</a>
+            <a href="IP.html">IP</a>
+            <a href="TCP.html">TCP</a>
+            <a href="HTTP.html"><strong>HTTP</strong></a>
+        </nav>
+        
+        <br /><br />
+        
+        <main>
+            <figure>
+                <img id="HTTP" src="img/HTTP.jpg" alt="HTTP protocol" />
+            </figure>
+            <div>
+                <h3>Hyper Text Transfer Protocol</h3>
+                <p>
+                    Hyper Text Transfer Protocol is a standard that web browsers and web servers use
+                    to communicate. It is used by the client program to request files from a remote server.
+                    HTTP is a stateless system meaning that unlike some other protocols, the HTTP request
+                    is dropped once the request is completed.
+                </p>
+                
+                <h3>How HTTP works</h3>
+                <p>
+                    Clients and servers communicate using request and respond messages.
+                    The three main messages are GET, POST, and head.
+                </p>
+                <ul>
+                    <li>HTTP GET messages sent to a server contain only a URL. 
+                    Optional parameters may be added to the end of the URL. 
+                    The server takes the optional data portion of the URL, if present, 
+                    and returns the result to the browser.</li>
+                    <li>HTTP POST messages place any parameters in the body of the request message rather than adding them to the end of the URL.</li>
+                    <li>HTTP HEAD request works the same as GET requests. Instead of replying with the full contents of the URL, the server sends back only the header information.</li>
+                </ul>
+            </div>
+            
+        </main>
+        
+     
+        <footer>
+             
+            <hr>
+            <img src="img/csumb.jpg" alt="CSUMB logo" /><br/>
+            CST 336. 2018&copy; Sahuri <br/> 
+            <a href="https://csumb.edu/"> CSUMB </a>
+         
+            
+        </footer>
+       
+        
+    </body>
+   
+
+</html>
