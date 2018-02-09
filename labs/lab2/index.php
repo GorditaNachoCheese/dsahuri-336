@@ -12,7 +12,9 @@
             ${"randomValue" . $i } = rand(0,2);
             displaySymbol(${"randomValue" . $i});
         }
-            
+        displayPoints($randomValue1, $randomValue2, $randomValue3);    
+        
+        
         function displaySymbol($randomValue)
         {
             /*
@@ -60,9 +62,18 @@
                         break;
                 }
                 
-                echo
+                echo "<h2> You won $totalPoints points!</h2>";
             }
+            
+            else 
+            {
+                echo "<h3> Try Again! </h3>";
+            }
+            
+            echo "</div>";
         }
+        
+        
         ?>
 
     </body>
