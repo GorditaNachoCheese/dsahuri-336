@@ -9,3 +9,18 @@
 [05-Feb-2018 23:20:11 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php on line 12
 [05-Feb-2018 23:24:30 UTC] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK), expecting ',' or ';' in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php on line 36
 [05-Feb-2018 23:24:30 UTC] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK), expecting ',' or ';' in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php on line 36
+[12-Feb-2018 22:22:15 UTC] PHP Fatal error:  Call to undefined function displaySymbol() in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php on line 16
+[12-Feb-2018 22:22:15 UTC] PHP Stack trace:
+[12-Feb-2018 22:22:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:0
+[12-Feb-2018 22:22:20 UTC] PHP Fatal error:  Call to undefined function displaySymbol() in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php on line 16
+[12-Feb-2018 22:22:20 UTC] PHP Stack trace:
+[12-Feb-2018 22:22:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:0
+[12-Feb-2018 22:31:47 UTC] PHP Fatal error:  Cannot redeclare play() (previously declared in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:14) in /home/ubuntu/workspace/dsahuri-336/labs/lab2/inc/functions.php on line 2
+[12-Feb-2018 22:31:47 UTC] PHP Stack trace:
+[12-Feb-2018 22:31:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:0
+[12-Feb-2018 22:31:48 UTC] PHP Fatal error:  Cannot redeclare play() (previously declared in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:14) in /home/ubuntu/workspace/dsahuri-336/labs/lab2/inc/functions.php on line 2
+[12-Feb-2018 22:31:48 UTC] PHP Stack trace:
+[12-Feb-2018 22:31:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:0
+[12-Feb-2018 22:31:48 UTC] PHP Fatal error:  Cannot redeclare play() (previously declared in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:14) in /home/ubuntu/workspace/dsahuri-336/labs/lab2/inc/functions.php on line 2
+[12-Feb-2018 22:31:48 UTC] PHP Stack trace:
+[12-Feb-2018 22:31:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:0
