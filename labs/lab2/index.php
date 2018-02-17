@@ -11,16 +11,21 @@
         </style>
     </head>
     <body>
-        <div>
-            <?php
+        
+            <div id="machine">
+                <?php
+                
+                play();
+                
+                ?>
+                
+                <form>
+                    <input type="submit" value="Spin!" />
+                </form>
+            </div>
             
-            play();
-            
-            ?>
-            
-            <form>
-                <input type="submit" value="Spin!" />
-            </form>
-        </div>
+            <footer>
+                <img src="img/buddy.jpg" alt="buddy">
+            </footer>
     </body>
 </html>

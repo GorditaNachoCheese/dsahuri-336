@@ -3,7 +3,7 @@
     {
         for ($i=1; $i<4; $i++)
         {
-            ${"randomValue" . $i } = rand(0,2);
+            ${"randomValue" . $i } = rand(0,5);
             displaySymbol(${"randomValue" . $i}, $i);
         }
         displayPoints($randomValue1, $randomValue2, $randomValue3);    
@@ -23,6 +23,12 @@
             case 1: $symbol = "cherry";
                 break;
             case 2: $symbol = "lemon";
+                break;
+            case 3: $symbol = "grapes";
+                break;
+            case 4: $symbol = "orange";
+                break;
+            case 5: $symbol = "bar";
                 break;
             
         }
