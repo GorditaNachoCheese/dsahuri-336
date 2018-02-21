@@ -2,7 +2,7 @@
             function display_items($item = null)
             {
                 $items = array(
-                    "rock"      => '<a href="?item=rock">Rock<br/><img src="img/rock.png" width="135" height="135" alt="rock"></a>',
+                    "rock"      => '<a id="left-element" href="?item=rock">Rock<br/><img src="img/rock.png" width="135" height="135" alt="rock"></a>',
                     "paper"     => '<a href="?item=paper">paper<br/><img src="img/paper.png" width="135" height="135" alt="paper"></a>',
                     "scissors"  => '<a href="?item=scissors">scissors<br/><img src="img/scissors.png" width="135" height="135" alt="scissors"></a>'
                     );
@@ -20,7 +20,7 @@
             {
                 if(isset($_GET['item']) == TRUE):
                     $items = array('rock', 'paper', 'scissors'); //valid items
-                    $user_item = $_GET['item']; //user items
+                    $user_item = strtolower($_GET['item']); //user items
                     $comp_item = $items[rand(0,2)];
                     echo $comp_item;
                     

@@ -1,8 +1,27 @@
-main
+h3 a
 {
-    margin: 0 auto;
-    text-align: center;
-    color: #0000000;
-    display:inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    text-decoration:none;
+    font-weight:normal;
+}
+
+h3 a: hover {text-decoration: underline;}
+
+#game a
+{
+    display: inline-block;
+    width: 140px;
+    color: #333;
+    font-size: 18px;
+    text-decoration:none;
+    text-align:center;
+    margin:10px;
     
+}
+
+#game a img
+{
+    border:3px dashed #555;
+    margin-top:3px;
 }
