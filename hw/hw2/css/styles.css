@@ -1,9 +1,8 @@
-
-
-
-header, main, nav, footer, body
+main
 {
     margin: 0 auto;
     text-align: center;
     color: #0000000;
+    display:inline-block;
+    
 }
