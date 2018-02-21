@@ -29,15 +29,11 @@
                         die;
                     endif;
                     
-                    if($user_item == 'scissors' && $comp_item == 'paper' ||
-                       $user_item == 'paper' && $comp_item == 'rock' ||
-                       $user_item == 'rock' && $comp_item == 'paper'):
+                    if($user_item == 'scissors' && $comp_item == 'paper' ||$user_item == 'paper' && $comp_item == 'rock' || $user_item == 'rock' && $comp_item == 'scissors'):
                         echo '<h2> You Win!</h2>';
                     endif;
                     
-                    if($comp_item == 'scissors' && $user_item == 'paper' ||
-                       $comp_item == 'paper' && $user_item == 'rock' ||
-                       $comp_item == 'rock' && $user_item == 'paper'):
+                    if($comp_item == 'scissors' && $user_item == 'paper' ||$comp_item == 'paper' && $user_item == 'rock' || $comp_item == 'rock' && $user_item == 'scissors'):
                         echo '<h2> Computer Wins!</h2>';
                     endif;
                     
