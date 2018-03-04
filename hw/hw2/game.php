@@ -25,7 +25,7 @@
                     echo $comp_item;
                     
                     if(in_array($user_item, $items) == FALSE):
-                        echo "Choose ROCK | PAPER | SCISSORS" ;
+                        echo "<h1>Choose ROCK | PAPER | SCISSORS</h1>" ;
                         die;
                     endif;
                     
