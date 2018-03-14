@@ -81,7 +81,7 @@ function test_input($data) {
   return $data;
 }
 
-function displayACK(){
+function display(){
     
     global $pet_name, $age, $type, $breed, $gender, $name, $email;
    
@@ -124,7 +124,7 @@ function displayACK(){
               && strcmp($genderErr,"Gender is required")
               && strcmp($nameErr,"Name is required") && strcmp($nameErr,"Only letters and white space allowed")
               && strcmp($emailErr,"Email is required")  && strcmp($emailErr,"Invalid email format")){
-                  displayACK(); // if form was submitted, then display information.
+                  display(); // if form was submitted, then display information.
               }
               else{
                 // do nothing (don't display results).

@@ -81,6 +81,7 @@
     </body>
 
     <footer>
+         <img src="img/csumb.jpg" alt="CSUMB logo" /><img id="me" src="img/buddy.jpg" alt="buddy verified" /><br/>
         <p style="color:white">CST 336 Internet Programming &copy;2018. All rights reserved. <br>
                         Danial Sahuri</p>
     </footer>
