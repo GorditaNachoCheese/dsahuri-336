@@ -24,3 +24,32 @@
 [12-Feb-2018 22:31:48 UTC] PHP Fatal error:  Cannot redeclare play() (previously declared in /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:14) in /home/ubuntu/workspace/dsahuri-336/labs/lab2/inc/functions.php on line 2
 [12-Feb-2018 22:31:48 UTC] PHP Stack trace:
 [12-Feb-2018 22:31:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab2/index.php:0
+[26-Mar-2018 22:09:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/ubuntu/workspace/dsahuri-336/dbConnection.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/dsahuri-336/dbConnection.php(19): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/dsahuri-336/labs/lab7/loginProcess.php(8): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/dsahuri-336/dbConnection.php on line 19
+[26-Mar-2018 22:13:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/ubuntu/workspace/dsahuri-336/dbConnection.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/dsahuri-336/dbConnection.php(19): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/dsahuri-336/labs/lab7/loginProcess.php(8): getDatabaseConnection('ottermart')
+#2 {main}
+  thrown in /home/ubuntu/workspace/dsahuri-336/dbConnection.php on line 19
+[26-Mar-2018 22:27:24 UTC] PHP Fatal error:  Call to undefined function displayAllProducts() in /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php on line 19
+[26-Mar-2018 22:27:24 UTC] PHP Stack trace:
+[26-Mar-2018 22:27:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php:0
+[26-Mar-2018 22:30:29 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php on line 6
+[26-Mar-2018 22:30:29 UTC] PHP Stack trace:
+[26-Mar-2018 22:30:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php:0
+[26-Mar-2018 22:30:29 UTC] PHP   2. displayAllProducts() /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php:27
+[26-Mar-2018 22:31:26 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php on line 7
+[26-Mar-2018 22:31:26 UTC] PHP Stack trace:
+[26-Mar-2018 22:31:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php:0
+[26-Mar-2018 22:31:26 UTC] PHP   2. displayAllProducts() /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php:28
+[26-Mar-2018 22:32:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php(13): PDOStatement->execute()
+#1 /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php(32): displayAllProducts()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dsahuri-336/labs/lab7/admin.php on line 13
