@@ -11,7 +11,7 @@
     function displayGenre(){
         global $conn;
         
-        $sql = "SELECT DISTINCT Genre FROM `GENRE` ORDER BY Genre";
+        $sql = "SELECT DISTINCT Genre FROM `genre` ORDER BY Genre";
         
         $stmt = $conn->prepare($sql);
         $stmt->execute();
@@ -30,7 +30,7 @@
     function displayPlatform(){
         global $conn;
         
-        $sql = "SELECT DISTINCT  Platform FROM `PLATFORM` ORDER BY Platform";
+        $sql = "SELECT DISTINCT  Platform FROM `platform` ORDER BY Platform";
         
         $stmt = $conn->prepare($sql);
         $stmt->execute();
@@ -61,7 +61,7 @@
             
             $namedParameters = array();
             
-            $sql = "SELECT * FROM PRICE NATURAL JOIN GENRE NATURAL JOIN PLATFORM WHERE 1";
+            $sql = "SELECT * FROM price NATURAL JOIN genre NATURAL JOIN platform WHERE 1";
             
             if (!empty($_GET['product'])) { //checks whether user has typed something in the "Product" text box
                  $sql .=  " AND Title LIKE :Title";
