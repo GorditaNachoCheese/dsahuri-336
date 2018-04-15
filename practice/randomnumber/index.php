@@ -2,10 +2,16 @@
 session_start();
 if(!isset($_SESSION['randomNumbers'])){
     $_SESSION['randomNumbers'] = array();
-    $_SESSION['randomNumbers'][] = rand(1,10);
-    $_SESSION['randomNumbers'][] = rand(1,10);
+    $_SESSION['randomNumbers'][] = rand(1,100);
     $_SESSION['trys'] = 0;
+    $history = array();
+    $_SESSION['history'] = $history;
 }
+
+// if(!isset($_SESSION['history'])){
+//     $_SESSION['history'] = array();
+// }
+
 if($_SERVER['REQUEST_METHOD'] === 'POST')
 {
     if(isset($_POST["guessForm"]))
@@ -17,76 +23,47 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
             $n1=1;
             echo '<h3>';
-            echo "Your guess for the first number was correct";
+            
+            echo "Your guess is correct";
+            // array_push($_SESSION['history'],$_SESSION['trys']);
             echo '</h3>';
             echo '<br/>';
+            array_push($_SESSION['history'], $_POST['number1']);
         }
         else 
         {
             if($_SESSION['randomNumbers'][0] < $_POST['number1'])
             {
                 echo '<h3>';
-                echo "Your guess for the first number was too high";
+                echo "Your guess is too high";
                 echo '</h3>';
                 echo '<br/>';
+                array_push($_SESSION['history'], $_POST['number1']);
             }
             else if($_SESSION['randomNumbers'][0] > $_POST['number1'])
             {
                 echo '<h3>';
-                echo "Your guess for the first number was too low";
+                echo "Your guess is too low";
                 echo '</h3>';
                 echo '<br/>';
+                array_push($_SESSION['history'], $_POST['number1']);
             }
         }
-        if($_SESSION['randomNumbers'][1] == $_POST['number2'])
-        {
-            $n2=1;
-            echo '<h3>';
-            echo "Your guess for the second number was correct";
-            echo '</h3>';
-            echo '<br/>';
-        }
-        else 
-        {
-            if($_SESSION['randomNumbers'][1] < $_POST['number2'])
-            {
-                echo '<h3>';
-                echo "Your guess for the second number was too high";
-                echo '</h3>';
-                echo '<br/>';
-            }
-            else if($_SESSION['randomNumbers'][1] > $_POST['number2'])
-            {
-                echo '<h3>';
-                echo "Your guess for the second number was too low";
-                echo '</h3>';
-                echo '<br/>';
-            }
-        }
-        if($n1 == 1 && $n2 == 1)
-        {
-            echo "<h2>The Numbers were: ";
-            echo $_SESSION['randomNumbers'][0];
-            echo " and ";
-            echo $_SESSION['randomNumbers'][1];
-            echo "</h2>";
-            echo "<br/><h3>It took you ".$_SESSION['trys']." guesses</h3>";
-            session_unset();
-        }
+        
     }
     else if(isset($_POST["giveUp"]))
     {
-        echo "<h2>YOU GAVE UP<br/>The Numbers were: ";
+        echo "<h2>YOU GAVE UP<br/>The Correct Number is: ";
         echo $_SESSION['randomNumbers'][0];
-        echo " and ";
-        echo $_SESSION['randomNumbers'][1];
+       
         echo "</h2>";
         session_unset();
         
     }
     else if(isset($_POST["reset"]))
     {
-        session_unset ();
+        array_push($_SESSION['history'],$_SESSION['trys']);
+        session_unset ($_SESSION['trys']);
         header("Location: index.php");
     }
 }
@@ -94,20 +71,18 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Guess the Numbers</title>
+        <title>Guess the Number</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <blockquote>
-        <h1> Guess the Numbers </h1>
-        <h3> Guess two numbers between 1 and 10!</h3>
+        <h1> Guess the Number </h1>
+        <h3> Guess the right number between 1 and 100!</h3>
         <form method="POST">
             
             Number 1: <input type="text" name="number1"/>
             <br />
-            Number 2: <input type="text" name="number2" />
-            <br /><br />
-            <input type="submit" value="Guess Numbers" name="guessForm"/>
+            <input type="submit" value="Guess Number" name="guessForm"/>
             <br /><br />
              <input type="submit" value="Give Up" name="giveUp"/>
              <input type="submit" value="Reset" name="reset"/>
@@ -115,9 +90,17 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
         </form>
         <?php
             echo '<h3>';
-            echo "Guesses: ".$_SESSION['trys'];
+            echo "Guesses: ".$_SESSION['trys']; 
+            echo '<br/>';
+            // print_r($_SESSION['history']); //"Attempts: ".$_SESSION['history'];
             echo '</h3>';
             echo '<br/>';
+            echo "Attempts: ";
+            
+            foreach($_SESSION['history'] as $try){
+                echo $try;
+                echo ", ";
+            }
         ?>
                 </blockquote>
     </body>
