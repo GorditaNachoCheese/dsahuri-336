@@ -1,5 +1,5 @@
 <?php
-    include 'dbConnection.php';
+    include '../../dbConnection.php';
     
     $conn = getDatabaseConnection("ottermart");
     function displayCategories(){
@@ -73,7 +73,7 @@
              $stmt->execute($namedParameters);
              $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-            foreach ($records as $record) {
+            foreach ($records as $record) { 
             
                  echo "<a href =\"purchaseHistory.php?productId=" .$record["productId"]. "\"> History </a>";
                  echo  $record["productName"] . " " . $record["productDescription"] . " $". $record["price"] ."<br /> <br>";
