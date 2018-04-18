@@ -1,7 +1,7 @@
 <?php
     
     include '../../dbConnection.php';
-    $conn = getDatabaseConnection("ottermart");
+    $conn = getDatabaseConnection("heroku_99b01dd7d4929b2");
     $productId = $_GET['productId'];
     $sql = "SELECT * FROM `om_product`
             NATURAL JOIN om_purchase 
