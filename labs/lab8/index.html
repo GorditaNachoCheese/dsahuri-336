@@ -5,68 +5,37 @@
         <link  href="css/styles.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <script language="javascript">
-            
-            var selectedWord = "";
-            var selectedHint = "";
-            var board = []; //creates new array
-            var remainingGuesses = 6;
-            var words = ["snake", "monkey", "beetle"];
-            
-            //alert(words[0]);
-            //console.log(words[0]);
-            
-            //LISTENERS
-            window.onload = startGame();
-            console.log(selectedWord);
-            
-            // for (var i=0; i < selectedWord.length; i++){
-            //     board.push("_");
-            // }
-            function startGame(){
-                pickWord();
-                initBoard();
-                updateBoard();
-            }
-            
-            function initBoard(){
-                for (var letter in selectedWord){
-                    board.push("_");
-                }
-            }
-            
-            function pickWord(){
-                var randomInt = Math.floor(math.random() * words.length);
-                selectedWord = words[randomInt];
-            }
-            
-            function updateBoard(){
-            for (var letter of board) {
-                document.getElementById("word").innerHtml += letter + " ";
-                }
-            }
-        </script>
     </head>
     <body>
         <div class='container text-center'>
             <header>
-                <h1>Hangman</h1>
-                <h4>Javascript Edition</h4>
+                <h1>Hangman  <i class="fa fa-male" aria-hidden="true"></i></h1>
+                
+                <hr id="line">
             </header>
             
+            <div><button class="btn btn-info" id="hint">Hint</button></div>
             <div id="word"></div>
             <div id="letters"></div>
+            
+            <div id="won">
+                <h2>You Won! <i class="fa fa-trophy" aria-hidden="true"></i></h2>
+                <button class="replayBtn btn btn-success"><i class="fa fa-repeat" aria-hidden="true">  Play Again.</i></button>
+            </div>
+            
+            <div id="lost">
+                <h2>You Lost!<i class="fa fa-frown-o" aria-hidden="true"></i></h2>
+                <button class="replayBtn btn btn-warning"><i class="fa fa-repeat" aria-hidden="true">  Play Again.</i></button>
+            </div>
             
             <div id="man">
                 <img src="img/stick_0.png" id="hangImg">
             </div>
         </div>
-        <script src="js/hangman.js"></script>
+        <script type="text/javascript" src="js/hangman.js"></script>
     </body>
 </html>
