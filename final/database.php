@@ -4,15 +4,44 @@ function getDatabaseConnection()
 {
     
 $servername = "us-cdbr-iron-east-05.cleardb.net";
-$username = "b910465920c218";
-$password = "9bd5a61c";
-$dbname = "heroku_b09823b21f68f71";
+$username = "ba8be324ea87c8";
+$password = "c00d271b";
+$dbname = "heroku_99b01dd7d4929b2";
+
+// $servername = "localhost";
+// $username = "root";
+// $password = "secret";
+// $dbname = "shoes";
 
 // Create connection
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     return $conn;
     
   }
+
+// function getDatabaseConnection($dbName) {
+
+// $host = "localhost";
+// $dbname = $dbName;
+// $username = "root";
+// $password = "secret";
+
+// //checks whether the URL contains "herokuapp" (using Heroku)
+// if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
+//   $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+//   $host = $url["host"];
+//   $dbname = substr($url["path"], 1);
+//   $username = $url["user"];
+//   $password = $url["pass"];
+// }
+
+// $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+// $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// return $dbConn;
+
+// }
+
   
  function getUsersThatMatchUserName() {
     

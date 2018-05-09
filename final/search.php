@@ -19,16 +19,20 @@
                $sql .=   " AND shoe_brand = '". $_GET['shoe_brand'] . "'"; 
            }
            
-           if (isset($_GET['available'])) {
+          if (isset($_GET['available'])) {
                // construct our SQL query accordingly.
                $sql .=   " AND shoe_availability = 'yes'"; 
            }
            
+          if (isset($_GET['notavailable'])) {
+               // construct our SQL query accordingly.
+               $sql .=   " AND shoe_availability = 'no'"; 
+           }
            
            
            
        
-       $dbConn = getDatabaseConnection(); 
+       $dbConn = getDatabaseConnection(shoes); 
    
        
        $statement = $dbConn->prepare($sql);
@@ -37,12 +41,12 @@
        $records = $statement->fetchAll(); 
         
        foreach ($records as $record) {
-            echo "<div class='tittle'>Shoe Id: ".$record["shoe_id"]."  Shoe Name:  ".$record["shoe_name"]."  Shoe Availability:  ".$record["shoe_availability"]."</div><br>"; 
+            echo "<div class='tittle'>Shoe Brand: ".$record["shoe_brand"]."  Shoe Name:  ".$record["shoe_name"]."  Shoe Availability:  ".$record["shoe_availability"]."</div><br>"; 
        }
    } }
    
    function shoebrand() {
-        $dbConn = getDatabaseConnection(); 
+        $dbConn = getDatabaseConnection(shoes); 
         $sql = 'SELECT DISTINCT(brand_name), brand_id  FROM f_brand;'; 
         $statement = $dbConn->prepare($sql);
         $statement->execute();
@@ -52,6 +56,7 @@
         foreach ($records as $record) {
             echo "<option value='". $record['brand_id']. "'>". $record['brand_name']. "</option>"; 
         }
+        return $record['brand_name'];
    }
   
   ?>
@@ -60,6 +65,7 @@
 <html>
       <head>
        <link href="style.css" rel="stylesheet" type="text/css" />   
+       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
       </head>
       <body>
         <header>
@@ -68,12 +74,12 @@
         <nav>
         <hr width= "50%" />
         <a href="index.php">Home</a>
-        <a href="guest.php">Guest</a>
+        <a href="search.php">Search</a>
         <a href="admin.php">Admin Log In</a>
         <a href="new_m.php">Subscribe</a>
         </nav>
         </br>
-        <div id="Guest" > Welcome Guest! Search our Shoe Inventory!</div>
+        <div id="Search" > Search our Shoe Inventory!</div>
         
         <header/>
         </br>
@@ -90,7 +96,9 @@
                </select>
                </br>
                Available:
-               <input type="checkbox" name="available">  
+               <input type="checkbox" name="available"><br>
+               Not Available:
+               <input type="checkbox" name="notavailable">  
                
                </br>
                 

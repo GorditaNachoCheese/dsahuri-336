@@ -56,7 +56,8 @@ if (!isset($_SESSION['username'])) {  //checks whether the admin is logged in
  
 <html>
       <head>
-       <link href="style.css" rel="stylesheet" type="text/css" />   
+        <link href="style.css" rel="stylesheet" type="text/css" />   
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
       </head>
       <body>
         <header>

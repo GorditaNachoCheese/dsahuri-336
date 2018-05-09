@@ -22,7 +22,7 @@ function getShoeInfo() {
      //echo "Form has been submitted!";
      
       $sql = "UPDATE f_shoes
-              SET  shoe_type = :shoe_type,
+              SET  
                    shoe_brand  = :shoe_brand,
                    shoe_name = :shoe_name,
                    shoe_availability = :shoe_availability,
@@ -31,7 +31,7 @@ function getShoeInfo() {
 
      $np = array();
     
-    $np[':shoe_type'] = $_GET['shoe_type'];
+   
     $np[':shoe_brand'] = $_GET['shoe_brand'];
     $np[':shoe_name'] = $_GET['shoe_name'];
     $np[':shoe_availability'] = $_GET['shoe_availability'];
@@ -61,6 +61,7 @@ function getShoeInfo() {
     <head>
         <title> Update Shoes </title>
          <link href="style.css" rel="stylesheet" type="text/css"/>
+         <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
     </head>
     <body>
     <header>
@@ -80,8 +81,7 @@ function getShoeInfo() {
             <input type="hidden" name="shoeId" value="<?=$userInfo['shoe_id']?>" />
             Shoe Name:<input type="text" name="shoe_name" value="<?=$userInfo['shoe_name']?>" />
             <br />
-            Shoe Type:<input type="text" name="shoe_type"value="<?=$userInfo['shoe_type']?>"/>
-            <br/>
+           
             
             <br />
             Shoe Brand:
@@ -92,21 +92,12 @@ function getShoeInfo() {
             <option value="Nike"  <?=($userInfo['shoe_brand']=='21')?" selected":"" ?>  >Nike</option>
             <option value="UnderArmour"  <?=($userInfo['shoe_brand']=='31')?" selected":"" ?>  >UnderArmour</option>
             <option value="Puma"  <?=($userInfo['shoe_brand']=='41')?" selected":"" ?>  >Puma</option>
-            <option value="Fila"  <?=($userInfo['shoe_brand']=='51')?" selected":"" ?>  >Fila</option>
-            <option value="UGG"  <?=($userInfo['shoe_brand']=='61')?" selected":"" ?>  >UGG</option>
             <option value="Vans"  <?=($userInfo['shoe_brand']=='71')?" selected":"" ?>  >Vans</option>
             <option value="New Balance"  <?=($userInfo['shoe_brand']=='81')?" selected":"" ?>  >New Balance</option>
             <option value="Champion"  <?=($userInfo['shoe_brand']=='91')?" selected":"" ?>  >Champion</option>
             <option value="Converse"  <?=($userInfo['shoe_brand']=='101')?" selected":"" ?>  >Converse</option>
-            <option value="Us Polo"  <?=($userInfo['shoe_brand']=='111')?" selected":"" ?>  >Us Polo</option>
-            <option value="Prada"  <?=($userInfo['shoe_brand']=='121')?" selected":"" ?>  >Prada</option>
-            <option value="Dolce & Gabbana"  <?=($userInfo['shoe_brand']=='131')?" selected":"" ?>  > Dolce & Gabbana</option>
-            <option value="Jymmy Choo"  <?=($userInfo['shoe_brand']=='141')?" selected":"" ?>  >Jymmy Choo</option>
-            <option value="Valentino"  <?=($userInfo['shoe_brand']=='151')?" selected":"" ?>  >Valentino</option>
-            <option value="Candie's"  <?=($userInfo['shoe_brand']=='161')?" selected":"" ?>  >Candie's</option>
-            <option value="Kate Spade"  <?=($userInfo['shoe_brand']=='171')?" selected":"" ?>  >Kate Spade</option>
-            <option value="Paris Hilton"  <?=($userInfo['shoe_brand']=='181')?" selected":"" ?>  >Paris Hilton</option>
-            <option value="Louboutin"  <?=($userInfo['shoe_brand']=='191')?" selected":"" ?>  >Louboutin</option>
+          
+           
             </select>
             </br>
             Shoe Price:<input type="text" name="Price"value="<?=$userInfo['Price']?>"/>

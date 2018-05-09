@@ -27,7 +27,7 @@ function loginProcess() {
             if (empty($record)) {
                 
                 echo "Wrong Username or password";
-                
+                echo  $record['username'];
             } else {
                 
                $_SESSION['username'] = $record['username'];
@@ -51,7 +51,7 @@ function loginProcess() {
      <title> Log In </title>
      
      <link href="style.css" rel="stylesheet" type="text/css" />
-     
+     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
   
     </head>
     
@@ -62,7 +62,7 @@ function loginProcess() {
     <nav>
         <hr width= "50%" />
         <a href="index.php">Home</a>
-        <a href="guest.php">Guest</a>
+        <a href="search.php">search</a>
         <a href="admin.php">Admin Log In</a>
         <a href="new_m.php">Subscribe</a>
     </nav>

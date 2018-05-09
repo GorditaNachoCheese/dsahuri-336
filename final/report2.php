@@ -30,7 +30,8 @@ function priceavg() {
  
 <html>
       <head>
-       <link href="style.css" rel="stylesheet" type="text/css" />   
+       <link href="style.css" rel="stylesheet" type="text/css" /> 
+       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
       </head>
       <body>
         <header>

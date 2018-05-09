@@ -26,6 +26,7 @@ if (!isset($_SESSION['username'])) {  //checks whether the admin is logged in
 <html>
       <head>
        <link href="style.css" rel="stylesheet" type="text/css" />   
+       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
         <script>
             
             function confirmDelete() {
@@ -53,13 +54,13 @@ if (!isset($_SESSION['username'])) {  //checks whether the admin is logged in
         
          <h1>Please Choose a report: </h1>
          <form action="report1.php">
-         <input type="submit" value="Report 1">
+         <input type="submit" value="Inventory">
          </form>
          <form action="report2.php">
-         <input type="submit" value="Report 2">
+         <input type="submit" value="Average Price">
          </form>
          <form action="report3.php">
-         <input type="submit" value="Report 3">
+         <input type="submit" value="Average Brand Price">
          </form>
          </br>
          <h1> Update or Delete Shoes in Inventory </h1>

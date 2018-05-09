@@ -14,7 +14,7 @@ nav a{
     font-size: 1.4em;
     text-decoration: none;
     color: white;
-    background: pink;
+    background: red;
     margin: 0px 25px;
     
 }
@@ -27,11 +27,11 @@ nav a:hover{
 
 header{
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
+    font-family: 'Righteous', cursive;
+    
 }
 
-#Faby{
+#Mike{
     font-size: 3.4em !important;
 }
 #Faby2{
@@ -41,7 +41,7 @@ header{
 
 .tittle{
     font-size: 1.0em !important;
-    color: #ff6289 !important;
+    color: #FF0000 !important;
     font-weight: bold !important;
     border: 8px solid white;
     padding: 15px;
@@ -50,7 +50,7 @@ header{
     display: block;
 }
 
-#Guest{
+#Search{
    font-size: 3.0em;
 }
 
@@ -76,7 +76,7 @@ input[type=password]{
 
 input[type=submit] {
     width: 10%;
-    background-color: #ff6289;
+    background-color: #FF0000;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

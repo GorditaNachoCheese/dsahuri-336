@@ -17,13 +17,14 @@ if (!isset($_SESSION['username'])) {  //checks whether the admin is logged in
            if (!empty($_GET['shoe_brand'])) {
                
             
-               $sql =  "SELECT avg(Price) as a from f_shoes WHERE shoe_brand = '". $_GET['shoe_brand'] . "'"; 
+              
+               $sql = "SELECT avg(Price) as a from f_shoes WHERE shoe_brand = ".$_GET['shoe_brand']." ";
                
            }
            
         
        
-       $dbConn = getDatabaseConnection(); 
+       $dbConn = getDatabaseConnection(shoes); 
    
        
        $statement = $dbConn->prepare($sql);
@@ -55,6 +56,7 @@ if (!isset($_SESSION['username'])) {  //checks whether the admin is logged in
 <html>
       <head>
        <link href="style.css" rel="stylesheet" type="text/css" />   
+       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
       </head>
       <body>
         <header>

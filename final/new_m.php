@@ -66,7 +66,7 @@
       <title> Subscribe </title>
      
      <link href="style.css" rel="stylesheet" type="text/css" />
-     
+     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
   
     </head>
     
@@ -78,13 +78,13 @@
         
         <hr width= "50%" />
         <a href="index.php">Home</a>
-        <a href="guest.php">Guest</a>
+        <a href="search.php">search</a>
         <a href="admin.php">Admin Log In</a>
         <a href="new_m.php">Subscribe</a>
     </nav>
     
 
-   <h2> Sign Up to get Special discounts! </h2>
+   <h2> Register for discounts and newsletter! </h2>
 
     <form onsubmit="return signup();">
         <fieldset>
@@ -93,7 +93,7 @@
             First Name:  <input id='firstname1' type="text" ><br> 
             Last Name:   <input id='lastname1' type="text" ><br> 
             Email:  <input id='email1' type="text" ><br> 
-            Desired Username: <input onchange="validateUsername();" id='username' type="text"> <span id="username-valid"></span></span><br>
+            Username: <input onchange="validateUsername();" id='username' type="text"> <span id="username-valid"></span></span><br>
             Password: <input id='password1' type="password"> <span id="password-valid"></span><br>
             <input type="submit" value="Sign up!">
         </fieldset>
